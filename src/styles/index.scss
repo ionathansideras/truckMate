@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import 'header-styles.scss';
+@import 'languageSelection-styles.scss';
+@import 'siteOverview-styles.scss';
 
 body {
     margin: 0;
-    padding-bottom: 2000px;
     font-family: 'Roboto', sans-serif;
 }
 
 canvas {
-    height: 100vh !important;
+     height: 100vh;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // z-index: -1;
+    // bottom: 0;
+    // right: 0;
 }

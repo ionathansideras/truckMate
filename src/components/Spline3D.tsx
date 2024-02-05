@@ -1,7 +1,7 @@
-import Spline from '@splinetool/react-spline';
+import Spline from "@splinetool/react-spline";
 
 export default function Spline3D() {
-  return (
-    <Spline scene="https://prod.spline.design/fRdF0BKx74LCMpxD/scene.splinecode" />
-  )
+    return (
+        <Spline scene="https://prod.spline.design/OTfm4ibJXcRVr1k7/scene.splinecode" />
+    );
 }

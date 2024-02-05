@@ -28,6 +28,7 @@ header {
         .header-logo-text2 {
             font-size: 2.5vh;
             margin: 0;
+            height: 3vh;
             font-weight: 700;
             color: $primary-color;
         }
@@ -38,7 +39,7 @@ header {
 
     .header-links {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         margin-right: 1rem;
 
@@ -46,6 +47,7 @@ header {
             border: none;
             color: rgb(112, 112, 112);
             cursor: pointer;
+            height: 3.2vh;
             font-weight: bold;
             margin-left: 1rem;
             font-size: 1.5vh;
@@ -77,18 +79,20 @@ header {
 
     @media screen and (max-width: 500px) {
         .header-logo {
-            margin-left: 0.6rem;
+            margin-left: 0.4rem;
         }
 
         .header-links {
-            margin-right: 0.6rem;
+            margin-right: 0.4rem;
+
             .header-button {
-                margin-left: 0.4rem;
+                margin-left: 0.2rem;
+                height: 3.4vh;
             }
 
             .header-button-start {
-                padding: 1vh 1rem;
-                margin-left: 0.4rem;
+                padding: 1vh 0.8rem;
+                margin-left: 0.2rem;
             }
         }
     }
