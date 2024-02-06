@@ -1,5 +1,115 @@
 .overview {
-    height: 100vh;
-    margin-top: 100vh;
     background-color: white;
+    background-image: url("web-background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .overview-section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .overview-info {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+
+            h1 {
+                font-size: 5rem;
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-weight: bold;
+                font-size: 3rem;
+                text-align: center;
+                margin-bottom: 1rem;
+                color: rgb(102, 102, 102);
+            }
+        }
+
+        img {
+            width: 30%;
+        }
+    }
+
+    .overview-section-break {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 7rem;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    }
+
+    #we-aim-reversed {
+        flex-direction: row-reverse;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .overview-section,
+        #we-aim-reversed {
+            flex-direction: column-reverse;
+
+            .overview-info {
+                width: 80%;
+            }
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .overview-section {
+            .overview-info {
+                h1 {
+                    font-size: 4rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            img {
+                width: 50%;
+            }
+        }
+        .overview-section-break {
+            h1 {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .overview-section-break {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+        .overview-section {
+            .overview-info {
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
 }
