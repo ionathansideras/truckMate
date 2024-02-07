@@ -1,7 +1,7 @@
 import { overviewData } from "../data/overviewData";
 
 interface OverviewData {
-    id: string;
+    id: number;
     title: string;
     text: string;
     img: string;

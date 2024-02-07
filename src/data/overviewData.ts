@@ -2,11 +2,10 @@ import carRoof from "../assets/car-roof-storage-carrying-parcel-boxes.svg";
 import maps from "../assets/maps.svg";
 import mobileApp from "../assets/mobile-app.svg";
 import cashOn from "../assets/cash-on-delivery-payment.svg";
-import { v4 as uuidv4 } from "uuid";
 
 export const overviewData = [
     {
-        id: uuidv4(),
+        id: 1,
         title: "Our vision...",
         text: "Extends beyond just facilitating moves",
         img: cashOn,
@@ -15,7 +14,7 @@ export const overviewData = [
         elementClass: "overview-section",
     },
     {
-        id: uuidv4(),
+        id: 2,
         title: "We aim to",
         text: "Revolutionise the relocation and trucking industry",
         img: maps,
@@ -24,7 +23,7 @@ export const overviewData = [
         elementClass: "overview-section",
     },
     {
-        id: uuidv4(),
+        id: 3,
         title: "We believe",
         text: "In making the process efficient, cost-effective and stress free",
         img: carRoof,
@@ -33,7 +32,7 @@ export const overviewData = [
         elementClass: "overview-section",
     },
     {
-        id: uuidv4(),
+        id: 4,
         title: "Providing...",
         text: "",
         img: "",
@@ -42,7 +41,7 @@ export const overviewData = [
         elementClass: "overview-section-break",
     },
     {
-        id: uuidv4(),
+        id: 5,
         title: "Tailor made solutions",
         text: "For our Users and Drivers",
         img: mobileApp,
