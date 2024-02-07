@@ -1,18 +1,22 @@
 {
   "name": "truckmate",
   "private": true,
+  "homepage": "https://github.com/ionathansideras/truckMate.git",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
     "@types/i18next": "^13.0.0",
     "@types/react-i18next": "^8.1.0",
+    "gh-pages": "^6.1.1",
     "i18next": "^23.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

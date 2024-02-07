@@ -5,6 +5,7 @@ import sass from 'sass';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/truckMate/",
   css: {
     preprocessorOptions: {
       scss: {
