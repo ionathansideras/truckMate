@@ -2,7 +2,7 @@
 
 header {
     background-color: #ffffff;
-    height: 5vh;
+    height: 6vh;
     display: flex;
     position: fixed;
     top: 5%;
@@ -21,14 +21,13 @@ header {
         margin-left: 1rem;
 
         img {
-            height: 3.5vh;
+            height: 4vh;
         }
 
         .header-logo-text1,
         .header-logo-text2 {
-            font-size: 2.5vh;
+            font-size: 3.5vh;
             margin: 0;
-            height: 3vh;
             font-weight: 700;
             color: $primary-color;
         }
@@ -39,7 +38,7 @@ header {
 
     .header-links {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         margin-right: 1rem;
 
@@ -48,10 +47,12 @@ header {
             color: rgb(112, 112, 112);
             cursor: pointer;
             background-color: white;
-            height: 3.2vh;
             font-weight: bold;
+            margin-top: 0.35vh;
             margin-left: 1rem;
-            font-size: 1.5vh;
+            font-size: 2vh;
+            appearance: none;
+            outline: none;
             transition: all 0.3s ease-in-out;
 
             &:hover {
@@ -68,7 +69,7 @@ header {
             border: none;
             cursor: pointer;
             font-weight: bold;
-            font-size: 1.5vh;
+            font-size: 2vh;
             white-space: nowrap;
             transition: all 0.3s ease-in-out;
 
@@ -81,6 +82,15 @@ header {
     @media screen and (max-width: 500px) {
         .header-logo {
             margin-left: 0.4rem;
+
+            img {
+                height: 3.5vh;
+            }
+
+            .header-logo-text1,
+            .header-logo-text2 {
+                font-size: 2.5vh;
+            }
         }
 
         .header-links {
@@ -88,12 +98,13 @@ header {
 
             .header-button {
                 margin-left: 0.2rem;
-                height: 3.4vh;
-            }
+                font-size: 1.5vh;
+           }
 
             .header-button-start {
                 padding: 1vh 0.8rem;
                 margin-left: 0.2rem;
+                font-size: 1.5vh;
             }
         }
     }

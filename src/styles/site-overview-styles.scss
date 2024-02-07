@@ -1,6 +1,6 @@
 .overview {
     background-color: white;
-    background-image: url("web-background.svg");
+    background-image: url("/web-background.svg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -90,10 +90,10 @@
                 font-size: 4rem;
             }
         }
-        .overview-section {
+        .overview-section, #we-aim-reversed {
             .overview-info {
                 h1 {
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
 
                 p {
@@ -101,5 +101,9 @@
                 }
             }
         }
+    }
+
+    @media screen and (max-width: 700px) {
+        background-image: url("/mobile-background.svg");
     }
 }

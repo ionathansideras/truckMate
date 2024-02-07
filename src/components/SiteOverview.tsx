@@ -1,7 +1,7 @@
 import { overviewData } from "../data/overviewData";
+import { useTranslation } from "react-i18next";
 
 interface OverviewData {
-    id: number;
     title: string;
     text: string;
     img: string;
@@ -11,18 +11,20 @@ interface OverviewData {
 }
 
 export default function SiteOverview() {
+    const { t } = useTranslation();
+
     return (
         <div className="overview">
-            {overviewData.map((item: OverviewData) => {
+            {overviewData.map((item: OverviewData, index: number) => {
                 return (
                     <section
-                        key={item.id}
+                        key={index}
                         id={item.elementId}
                         className={item.elementClass}
                     >
                         <div className="overview-info">
-                            <h1>{item.title}</h1>
-                            <p>{item.text}</p>
+                            <h1>{t(item.title)}</h1>
+                            <p>{t(item.text)}</p>
                         </div>
                         <img src={item.img} alt={item.alt} />
                     </section>
