@@ -1,11 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-@import 'header-styles.scss';
-@import 'language-selection-styles.scss';
-@import 'site-overview-styles.scss';
-@import 'spline3d-styles.scss';
+@import "header-styles.scss";
+@import "language-selection-styles.scss";
+@import "site-overview-styles.scss";
+@import "spline3d-styles.scss";
+@import "animations.scss";
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#root {
+    overflow-x: hidden;
 }

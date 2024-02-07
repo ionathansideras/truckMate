@@ -3,6 +3,7 @@ import maps from "../assets/maps.svg";
 import mobileApp from "../assets/mobile-app.svg";
 import cashOn from "../assets/cash-on-delivery-payment.svg";
 
+// Overview data to map over and build the site overview
 export const overviewData = [
     {
         title: "Our vision...",
@@ -25,7 +26,7 @@ export const overviewData = [
         text: "In making the process efficient, cost-effective and stress free",
         img: carRoof,
         alt: "Car roof with parcel boxes icon",
-        elementId: "",
+        elementId: "we-believe",
         elementClass: "overview-section",
     },
     {
@@ -41,7 +42,7 @@ export const overviewData = [
         text: "For our Users and Drivers",
         img: mobileApp,
         alt: "Mobile app icon",
-        elementId: "",
+        elementId: "made-solutions",
         elementClass: "overview-section",
     },
 ];
