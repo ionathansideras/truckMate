@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { overviewData } from "../data/overviewData";
 
 interface OverviewData {
