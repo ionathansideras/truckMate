@@ -1,10 +1,15 @@
+// Node.js or third-party libraries
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
+// my own codebase
+import { greenButton, defaultButton } from "../helpers/buttonFormStyles";
 import truckImg from "../assets/truck.png";
 import emailImg from "../assets/email.png";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
 import { WaitListProps } from "../interfaces/refProps";
 
+// component to display the wait list section of the page
 export default function WaitList({ waitListRef }: WaitListProps) {
     // Use the custom hook to get the sectionRefs ref
     const sectionRefs = useIntersectionObserver();
@@ -55,19 +60,21 @@ export default function WaitList({ waitListRef }: WaitListProps) {
 
                     <div className="wait-list-role">
                         <div
-                            style={{
-                                borderColor: role === "driver" ? "#63A11B" : "",
-                                color: role === "driver" ? "#63A11B" : "",
-                            }}
+                            style={
+                                role === "driver"
+                                    ? greenButton()
+                                    : defaultButton()
+                            }
                             onClick={() => setRole("driver")}
                         >
                             {t("Driver")}
                         </div>
                         <div
-                            style={{
-                                borderColor: role === "user" ? "#63A11B" : "",
-                                color: role === "user" ? "#63A11B" : "",
-                            }}
+                            style={
+                                role === "user"
+                                    ? greenButton()
+                                    : defaultButton()
+                            }
                             onClick={() => setRole("user")}
                         >
                             {t("User")}
