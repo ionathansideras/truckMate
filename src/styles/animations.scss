@@ -52,3 +52,23 @@ $sections: (
         }
     }
 }
+
+.wait-list {
+    .wait-list-truck {
+        transform: translateX(-200%);
+        transition: all 0.8s ease-in-out;
+    }
+    .wait-list-form {
+        transform: translateX(200%);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+#wait-list.wait-list-visible {
+    .wait-list-truck {
+        transform: translateX(0);
+    }
+    .wait-list-form {
+        transform: translateX(0);
+    }
+}

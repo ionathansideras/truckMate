@@ -1,0 +1,234 @@
+@import "_variables.scss";
+
+.wait-list {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+
+    .wait-list-truck {
+        width: 40%;
+    }
+
+    .wait-list-form-container {
+        width: 60%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .wait-list-form {
+            width: 80%;
+            padding: 3vh 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: white;
+            border-radius: 60px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+
+            h1 {
+                font-size: 3vw;
+                margin: 0;
+                font-weight: bold;
+                text-align: center;
+                width: 90%;
+            }
+
+            > p {
+                width: 90%;
+                font-size: 1vw;
+                text-align: center;
+                color: rgb(114, 114, 114);
+                font-weight: bold;
+            }
+
+            .wait-list-email-input {
+                width: 70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                input {
+                    width: 80%;
+                    height: 7vh;
+                    border-left: rgb(190, 190, 190) 1px solid;
+                    border-top: rgb(190, 190, 190) 1px solid;
+                    border-bottom: rgb(190, 190, 190) 1px solid;
+                    border-radius: 15px 0 0 15px;
+                    border-right: none;
+                    padding: 0 20px;
+                    font-size: 1vw;
+                    font-weight: bold;
+                    outline: none;
+                }
+
+                .wait-list-email {
+                    width: 20%;
+                    height: 7vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-right: rgb(190, 190, 190) 1px solid;
+                    border-top: rgb(190, 190, 190) 1px solid;
+                    border-bottom: rgb(190, 190, 190) 1px solid;
+                    border-radius: 0 15px 15px 0;
+                    cursor: pointer;
+
+                    img {
+                        height: 50%;
+                    }
+                }
+            }
+
+            .wait-list-brake {
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                hr {
+                    width: 30%;
+                    border: none;
+                    margin: 0;
+                    border-top: 1px solid rgb(190, 190, 190);
+                }
+
+                p {
+                    font-size: 0.8vw;
+                    text-align: center;
+                    color: rgb(114, 114, 114);
+                    font-weight: bold;
+                }
+            }
+
+            .wait-list-role {
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div {
+                    width: 48%;
+                    height: 7vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: rgb(188, 188, 188) 2px solid;
+                    border-radius: 15px;
+                    font-size: 1vw;
+                    color: rgb(112, 112, 112);
+                    background-color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                    outline: none;
+                }
+            }
+
+            .wait-list-submit {
+                width: 70%;
+                height: 7vh;
+                border: none;
+                border-radius: 15px;
+                font-size: 1vw;
+                color: white;
+                background-color: $primary-color;
+                font-weight: bold;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1050px) {
+        .wait-list-form-container {
+            .wait-list-form {
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+            .wait-list-email-input {
+                input {
+                    font-size: 1rem !important;
+                }
+            }
+
+            .wait-list-brake {
+                p {
+                    font-size: 0.8rem !important;
+                }
+            }
+
+            .wait-list-role {
+                div {
+                    font-size: 1rem !important;
+                }
+            }
+
+            .wait-list-submit {
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .wait-list-truck {
+            display: none;
+        }
+        .wait-list-form-container {
+            width: 100%;
+
+            .wait-list-form {
+                width: 90%;
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .wait-list-form-container {
+            .wait-list-form {
+                border-radius: 35px;
+            }
+
+            .wait-list-email-input {
+                width: 90% !important;
+            }
+
+            .wait-list-brake {
+                width: 90% !important;
+            }
+
+            .wait-list-role {
+                width: 90% !important;
+            }
+
+            .wait-list-submit {
+                width: 90% !important;
+            }
+        }
+    }
+
+    @media screen and (max-width: 400px){
+        .wait-list-form-container {
+            .wait-list-brake {
+                p {
+                    font-size: 0.6rem !important;
+                }
+            }
+        }
+    }
+}
