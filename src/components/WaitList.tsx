@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 // my own codebase
 import { greenButton, defaultButton } from "../helpers/buttonFormStyles";
 import truckImg from "../assets/truck.png";
-import emailImg from "../assets/email.png";
+import emailImg from "../assets/email2.svg";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import { WaitListProps } from "../interfaces/refProps";
 

@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 // Define the custom hook
 export function useIntersectionObserver() {
     // Create a ref to store references to each section
-    const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const sectionRefs = useRef<(HTMLDivElement | HTMLFormElement | null)[]>([]);
 
     // Use the useEffect hook to set up the Intersection Observer
     useEffect(() => {
