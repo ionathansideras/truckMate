@@ -109,18 +109,31 @@ $sections: (
     }
 }
 
-.contact-form {
-    transform: scale(0);
-    transition: all 0.5s ease-in-out;
-}
-.contact-information {
-    transform: scale(0);
-    transition: all 0.5s ease-in-out;
+
+.contact-left {
+    .contact-form {
+        transform: scale(0);
+    }
 }
 
-#contact-form.contact-form-visible {
-    transform: scale(1);
+.contact-right {
+    .contact-information {
+        transform: scale(0);
+    }
 }
-#contact-information.contact-information-visible {
-    transform: scale(1);
+
+#contact-left.contact-left-visible {
+    .contact-form {
+        transform: scale(1);
+    }
+}
+
+#contact-right.contact-right-visible {
+    .contact-information {
+        transform: scale(1);
+    }
+}
+
+.header-visible {
+    top: 5%;
 }

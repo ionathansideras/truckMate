@@ -6,10 +6,14 @@ import { useTranslation } from "react-i18next";
 import scrollToTop from "../helpers/scrollToTop";
 import { WaitListProps, ContactProps } from "../interfaces/refProps";
 
+import { useEffect, useRef } from "react";
+
 // Define the Header component
 export default function Header({ waitListRef, contactRef }: WaitListProps & ContactProps) {
     // Use the useTranslation hook to get the t function for translation
     const { t } = useTranslation();
+
+    const headerRef = useRef<HTMLHeadElement>(null);
 
     // Function to handle the scroll to the wait list section
     const handleScollToWaitList = () => {
@@ -27,9 +31,14 @@ export default function Header({ waitListRef, contactRef }: WaitListProps & Cont
             contactRef.current.scrollIntoView({ behavior: "smooth" });
         }
     };
+
+    useEffect(() => {
+        headerRef.current?.classList.add("header-visible");
+    },[]);
+
     // Render the Header component
     return (
-        <header>
+        <header ref={headerRef}>
             {/* Logo section */}
             <div className="header-logo">
                 {/* Display the truck image */}

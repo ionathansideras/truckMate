@@ -18,46 +18,56 @@ export default function Contact({ contactRef }: ContactProps) {
     };
 
     return (
-        <div className="contact" id="contact" ref={contactRef}>
-            <form
-                className="contact-form" id="contact-form"
-                onSubmit={handleSubmit}
-            >
-                <h1  ref={(el: HTMLDivElement | null) =>
-                    (sectionRefs.current[0] = el)
-                }>{t("Get in Touch")}</h1>
-                <input type="text" placeholder={t("Name")} />
-                <input type="email" placeholder="Email" />
-                <textarea placeholder={t("Message...")}></textarea>
-                <button>{t("Send Message")}</button>
-            </form>
+        <div className="contact" ref={contactRef}>
 
-            <div className="contact-information" id="contact-information">
-                <h1 ref={(el: HTMLDivElement | null) =>
-                    (sectionRefs.current[1] = el)
-                }>{t("Information")}</h1>
-                <div>
-                    <p>
-                        <img src={addressImg} alt="address-icon" />
-                        {t("Address")}
-                    </p>
-                    <h4>1234 Street Name, City, United States</h4>
-                </div>
-                <div>
-                    <p>
-                        <img src={phoneImg} alt="phone-icon" />
-                        {t("Phone")}
-                    </p>
-                    <h4>+123 456 7890</h4>
-                </div>
-                <div>
-                    <p>
-                        <img src={emailImg} alt="email-icon" />
-                        Email
-                    </p>
-                    <h4>example@gmail.com</h4>
+            <div className="contact-left" id="contact-left">
+                <form
+                    className="contact-form"
+                    onSubmit={handleSubmit}
+                    ref={(el: HTMLFormElement | null) =>
+                        (sectionRefs.current[0] = el)
+                    }
+                >
+                    <h1>{t("Get in Touch")}</h1>
+                    <input type="text" placeholder={t("Name")} />
+                    <input type="email" placeholder="Email" />
+                    <textarea placeholder={t("Message...")}></textarea>
+                    <button>{t("Send Message")}</button>
+                </form>
+            </div>
+
+            <div className="contact-right" id="contact-right">
+                <div
+                    className="contact-information"
+                    ref={(el: HTMLDivElement | null) =>
+                        (sectionRefs.current[1] = el)
+                    }
+                >
+                    <h1>{t("Information")}</h1>
+                    <div>
+                        <p>
+                            <img src={addressImg} alt="address-icon" />
+                            {t("Address")}
+                        </p>
+                        <h4>1234 Street Name, City, United States</h4>
+                    </div>
+                    <div>
+                        <p>
+                            <img src={phoneImg} alt="phone-icon" />
+                            {t("Phone")}
+                        </p>
+                        <h4>+123 456 7890</h4>
+                    </div>
+                    <div>
+                        <p>
+                            <img src={emailImg} alt="email-icon" />
+                            Email
+                        </p>
+                        <h4>example@gmail.com</h4>
+                    </div>
                 </div>
             </div>
+            
         </div>
     );
 }
