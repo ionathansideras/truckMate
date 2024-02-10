@@ -19,7 +19,6 @@ export default function Header({ waitListRef, contactRef }: WaitListProps & Cont
             waitListRef.current.scrollIntoView({ behavior: "smooth" });
         }
     };
-
     // Function to handle the scroll to the contact section
     const handleScollToContact = () => {
         // Check if the contactRef is not null

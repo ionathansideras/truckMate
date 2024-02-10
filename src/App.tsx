@@ -6,6 +6,7 @@ import SiteOverview from "./components/SiteOverview";
 import WaitList from "./components/WaitList";
 import Contact from "./components/Contact";
 import { useRef } from "react";
+import Footer from "./components/Footer";
 
 // Define the App component
 export default function App() {
@@ -28,6 +29,8 @@ export default function App() {
             <WaitList waitListRef={waitListRef} />
             {/* Render the Contact component */}
             <Contact contactRef={contactRef}/>
+            {/* Render the Footer component */}
+            <Footer />
         </>
     );
 }

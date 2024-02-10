@@ -4,11 +4,14 @@ import englishFlag from "../assets/english-flag.svg";
 
 // Import the useTranslation hook from the 'react-i18next' library
 import { useTranslation } from "react-i18next";
+import { useCheckPageIsBottom } from "../hooks/useCheckPageIsBottom";
 
 // Define the LanguageSelection component
 export default function LanguageSelection() {
     // Use the useTranslation hook to get the i18n instance for translation
     const { i18n } = useTranslation();
+
+    const isBottom = useCheckPageIsBottom();
 
     // Define a function to change the language
     const changeLanguage = () => {
@@ -24,7 +27,13 @@ export default function LanguageSelection() {
     // Render the LanguageSelection component
     return (
         // When the button is clicked, call the changeLanguage function
-        <button onClick={changeLanguage} className="language-toggle-button">
+        <button
+            onClick={changeLanguage}
+            className="language-toggle-button"
+            style={{
+                transform: isBottom ? "translateX(-200%)" : "translateX(0)",
+            }}
+        >
             {/* Display the text 'Translate to' */}
             <p>Translate to</p>
             {/* Display the flag of the language to switch to */}
