@@ -8,6 +8,9 @@ import truckImg from "../assets/truck.png";
 import emailImg from "../assets/email2.svg";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import { WaitListProps } from "../interfaces/refProps";
+import {addEmailToDatabase} from "../helpers/addEmailToDatabase";
+import {checkRole} from "../helpers/checkRole";
+import {checkEmail} from "../helpers/checkEmail";
 
 // component to display the wait list section of the page
 export default function WaitList({ waitListRef }: WaitListProps) {
@@ -20,9 +23,17 @@ export default function WaitList({ waitListRef }: WaitListProps) {
     // state to store if its driver or user
     const [role, setRole] = useState("");
 
-    // Function to handle the form submission
-    const handleSubmit = (e: React.FormEvent) => {
+    // state to store the email
+    const [email, setEmail] = useState("");
+
+    // function to handle the form submission
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        if (!checkRole(role)) return;
+        if (!checkEmail(email)) return;
+        addEmailToDatabase(email, role);
+        setEmail("");
+        setRole("");
     };
 
     return (
@@ -44,7 +55,9 @@ export default function WaitList({ waitListRef }: WaitListProps) {
 
                     <div className="wait-list-email-input">
                         <input
-                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            type="text"
                             placeholder={t("Enter your email")}
                         />
                         <div className="wait-list-email">
