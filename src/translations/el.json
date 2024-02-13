@@ -32,5 +32,8 @@
     "Please enter a valid name!" : "Παρακαλώ εισάγετε ένα έγκυρο όνομα!",
     "Success" : "Επιτυχία",
     "Email added to our wait list!" : "Το email προστέθηκε στη λίστα αναμονής μας!",
-    "User already exists!" : "Ο χρήστης υπάρχει ήδη!"
+    "User already exists!" : "Ο χρήστης υπάρχει ήδη!",
+    "Email sent successfully!" : "Το email στάλθηκε με επιτυχία!",
+    "error" : "σφάλμα",
+    "Error sending email!" : "Σφάλμα κατά την αποστολή email!"
 }

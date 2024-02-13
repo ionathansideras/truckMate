@@ -8,33 +8,25 @@ import { useState } from "react";
 import { checkEmail } from "../helpers/checkEmail";
 import { checkName } from "../helpers/checkName";
 import { checkMessage } from "../helpers/checkMessage";
-import { Resend } from "resend";
+import {sendEmail} from "../helpers/sendEmail";
 
 export default function Contact({ contactRef }: ContactProps) {
     // Use the custom hook to get the sectionRefs ref
-    const sectionRefs = useIntersectionObserver();
-
+    const sectionRefs =  useIntersectionObserver();
     const [email, setEmail] = useState("");
     const [Name, setName] = useState("");
     const [message, setMessage] = useState("");
-
-    const resend = new Resend(import.meta.env.VITE_API_KEY);
 
     // Use the useTranslation hook to get the t function for translation
     const { t } = useTranslation();
 
     // Function to handle form submission
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!checkName(Name)) return;
         if (!checkEmail(email)) return;
         if (!checkMessage(message)) return;
-        resend.emails.send({
-            from: email,
-            to: "iona8ansideras@gmail.com",
-            subject: "Truckmate Contact Form Submission",
-            html: message,
-        });
+        sendEmail({sectionRefs});
         setEmail("");
         setName("");
         setMessage("");
@@ -54,6 +46,7 @@ export default function Contact({ contactRef }: ContactProps) {
                     <input
                         value={Name}
                         onChange={(e) => setName(e.target.value)}
+                        name="user_name"
                         type="text"
                         placeholder={t("Name")}
                     />
@@ -61,9 +54,11 @@ export default function Contact({ contactRef }: ContactProps) {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         type="email"
+                        name="user_email"
                         placeholder="Email"
                     />
                     <textarea
+                        name="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder={t("Message...")}
