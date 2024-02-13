@@ -6,8 +6,9 @@ import { ContactProps } from "../interfaces/refProps";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { checkEmail } from "../helpers/checkEmail";
-import {checkName} from "../helpers/checkName";
-import {checkMessage} from "../helpers/checkMessage";
+import { checkName } from "../helpers/checkName";
+import { checkMessage } from "../helpers/checkMessage";
+import { Resend } from "resend";
 
 export default function Contact({ contactRef }: ContactProps) {
     // Use the custom hook to get the sectionRefs ref
@@ -16,6 +17,8 @@ export default function Contact({ contactRef }: ContactProps) {
     const [email, setEmail] = useState("");
     const [Name, setName] = useState("");
     const [message, setMessage] = useState("");
+
+    const resend = new Resend(import.meta.env.VITE_API_KEY);
 
     // Use the useTranslation hook to get the t function for translation
     const { t } = useTranslation();
@@ -26,6 +29,12 @@ export default function Contact({ contactRef }: ContactProps) {
         if (!checkName(Name)) return;
         if (!checkEmail(email)) return;
         if (!checkMessage(message)) return;
+        resend.emails.send({
+            from: email,
+            to: "iona8ansideras@gmail.com",
+            subject: "Truckmate Contact Form Submission",
+            html: message,
+        });
         setEmail("");
         setName("");
         setMessage("");

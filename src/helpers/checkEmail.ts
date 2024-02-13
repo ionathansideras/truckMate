@@ -1,6 +1,6 @@
 // Import the Toast instance from the 'toast' module
 import {Toast} from './toast'
-
+import i18next from 'i18next';
 // Define a function to check if an email is valid
 function checkEmail(email: string) {
     // Define a regular expression to test the email
@@ -14,8 +14,8 @@ function checkEmail(email: string) {
         // If the email does not match the regular expression, display a toast with an error message
         Toast.fire({
         icon: "error",
-        title: "Oops...",
-        text: "Please enter a valid email!",
+        title: i18next.t("Oops..."),
+        text: i18next.t("Please enter a valid email!"),
         });
         // And return false
         return false;

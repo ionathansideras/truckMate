@@ -23,5 +23,14 @@
     "Send Message": "Αποστολή μηνύματος",
     "Information": "Πληροφορίες",
     "Address": "Διεύθυνση",
-    "Phone": "Τηλέφωνο"
+    "Phone": "Τηλέφωνο",
+    "Please choose a role!" : "Παρακαλώ επιλέξτε έναν ρόλο!",
+    "Oops..." : "Ουπς...",
+    "Please enter a valid email!" : "Παρακαλώ εισάγετε ένα έγκυρο email!",
+    "Message is too long, the maximum length is 300 characters." : "Το μήνυμα είναι πολύ μεγάλο, το μέγιστο μήκος είναι 300 χαρακτήρες.",
+    "Please enter a message!" : "Παρακαλώ εισάγετε ένα μήνυμα!",
+    "Please enter a valid name!" : "Παρακαλώ εισάγετε ένα έγκυρο όνομα!",
+    "Success" : "Επιτυχία",
+    "Email added to our wait list!" : "Το email προστέθηκε στη λίστα αναμονής μας!",
+    "User already exists!" : "Ο χρήστης υπάρχει ήδη!"
 }

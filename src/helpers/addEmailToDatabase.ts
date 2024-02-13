@@ -3,6 +3,7 @@ import { addDoc, collection, query, getDocs, where } from "firebase/firestore";
 // Import the Firestore instance
 import { db } from "../config/firebaseConfig";
 import {Toast} from "./toast";
+import i18next from 'i18next';
 
 // Define an asynchronous function to add an email to the database
 async function addEmailToDatabase(email: string, role: string) {
@@ -25,15 +26,15 @@ async function addEmailToDatabase(email: string, role: string) {
         // Use the Toast instance
         Toast.fire({
             icon: "success",
-            title: "Success",
-            text: "Email added to our wait list!",
+            title: i18next.t("Success"),
+            text: i18next.t("Email added to our wait list!"),
         });
     } else {
         // Use the Toast instance
         Toast.fire({
             icon: "error",
-            title: "Oops...",
-            text: "User already exists!",
+            title: i18next.t("Oops..."),
+            text: i18next.t("User already exists!"),
         });
     }
 }

@@ -23,5 +23,14 @@
     "Send Message": "Send Message",
     "Information": "Information",
     "Address": "Address",
-    "Phone": "Phone"
+    "Phone": "Phone",
+    "Oops..." : "Oops...",
+    "Please choose a role!" : "Please choose a role!",
+    "Please enter a valid email!" : "Please enter a valid email!",
+    "Please enter a message!" : "Please enter a message!",
+    "Message is too long, the maximum length is 300 characters." : "Message is too long, the maximum length is 300 characters.",
+    "Please enter a valid name!" : "Please enter a valid name!",
+    "Email added to our wait list!" : "Email added to our wait list!",
+    "Success" : "Success",
+    "User already exists!" : "User already exists!"
 }
