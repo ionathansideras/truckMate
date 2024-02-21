@@ -80,21 +80,21 @@ export default function Contact({ contactRef }: ContactProps) {
                             <img src={addressImg} alt="address-icon" />
                             {t("Address")}
                         </p>
-                        <h4>1234 Street Name, City, United States</h4>
+                        <h4>Elenis Palaiologinas 5, Limassol, 3040</h4>
                     </div>
                     <div>
                         <p>
                             <img src={phoneImg} alt="phone-icon" />
                             {t("Phone")}
                         </p>
-                        <h4>+123 456 7890</h4>
+                        <h4>+30 6945825666</h4>
                     </div>
                     <div>
                         <p>
                             <img src={emailImg} alt="email-icon" />
                             Email
                         </p>
-                        <h4>example@gmail.com</h4>
+                        <h4>info@truckmate.gr</h4>
                     </div>
                 </div>
             </div>

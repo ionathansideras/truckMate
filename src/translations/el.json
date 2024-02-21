@@ -35,5 +35,6 @@
     "User already exists!" : "Ο χρήστης υπάρχει ήδη!",
     "Email sent successfully!" : "Το email στάλθηκε με επιτυχία!",
     "error" : "σφάλμα",
-    "Error sending email!" : "Σφάλμα κατά την αποστολή email!"
+    "Error sending email!" : "Σφάλμα κατά την αποστολή email!",
+    "Get in Touch": "Στείλε μας"
 }

@@ -35,5 +35,6 @@
     "User already exists!" : "User already exists!",
     "Email sent successfully!" : "Email sent successfully!",
     "error" : "error",
-    "Error sending email!" : "Error sending email!"
+    "Error sending email!" : "Error sending email!",
+    "Get in Touch" : "Get in Touch"
 }
