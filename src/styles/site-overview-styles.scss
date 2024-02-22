@@ -4,16 +4,33 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    .overview-section {
-        height: 100vh;
+    .reverse {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        .overview-info {
+            margin-left: 5%;
+        }
+    }
+
+    .column {
         display: flex;
         justify-content: center;
+
+        .overview-info {
+            margin-right: 5%;
+        }
+    }
+
+    .overview-section {
+        height: 100vh;
         align-items: center;
 
         .overview-info {
             display: flex;
             flex-direction: column;
-            width: 40%;
+            width: 55%;
 
             h1 {
                 font-size: 5rem;
@@ -50,17 +67,24 @@
         }
     }
 
-    #we-aim-reversed {
-        flex-direction: row-reverse;
-    }
-
     @media screen and (max-width: 1200px) {
-        .overview-section,
-        #we-aim-reversed {
+        .reverse {
+            .overview-info {
+                margin-left: 0;
+            }
+        }
+    
+        .column {
+            .overview-info {
+                margin-right: 0;
+            }
+        }
+
+        .overview-section {
             flex-direction: column-reverse;
 
             .overview-info {
-                width: 80%;
+                width: 95%;
 
                 h1 {
                     font-size: 4rem;
@@ -90,14 +114,15 @@
                 font-size: 4rem;
             }
         }
-        .overview-section, #we-aim-reversed {
+        .overview-section {
             .overview-info {
                 h1 {
                     font-size: 2.5rem;
                 }
 
                 p {
-                    font-size: 2rem;
+                    margin-top: 5vh;
+                    font-size: 1.5rem;
                 }
             }
         }

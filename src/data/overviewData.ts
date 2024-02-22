@@ -2,47 +2,51 @@ import carRoof from "../assets/car-roof-storage-carrying-parcel-boxes.svg";
 import maps from "../assets/maps.svg";
 import mobileApp from "../assets/mobile-app.svg";
 import cashOn from "../assets/cash-on-delivery-payment.svg";
+import invest from "../assets/invest.svg";
+import team from "../assets/team.svg";
 
 // Overview data to map over and build the site overview
 export const overviewData = [
     {
-        title: "Our vision...",
-        text: "Extends beyond just facilitating moves",
+        title: "Revolutionize your trucking career:",
+        text: "Earn more, work smarter,connect stronger",
         img: cashOn,
         alt: "Cash on delivery icon",
-        elementId: "our-vision",
-        elementClass: "overview-section",
+        elementClass: "overview-section column",
     },
     {
-        title: "We aim to",
-        text: "Revolutionise the relocation and trucking industry",
+        title: "Go beyond standard job boards:",
+        text: "Connecting you immediately to people and businesses with moving needs",
         img: maps,
         alt: "Maps icon",
-        elementId: "we-aim-reversed",
-        elementClass: "overview-section",
+        elementClass: "overview-section reverse",
     },
     {
-        title: "We believe",
-        text: "In making the process efficient, cost-effective and stress free",
+        title: "Gain more control:",
+        text: "Manage your schedule, choose your jobs and enjoy the freedom of being your own boss with TruckMate",
         img: carRoof,
         alt: "Car roof with parcel boxes icon",
-        elementId: "we-believe",
-        elementClass: "overview-section",
+        elementClass: "overview-section column",
     },
     {
-        title: "Providing",
-        text: "",
-        img: "",
-        alt: "",
-        elementId: "providing-element",
-        elementClass: "overview-section-break",
-    },
-    {
-        title: "Tailor made solutions",
-        text: "For our Users and Drivers",
+        title: "Build your driver profile and reputation:",
+        text: "Showcase your skills and experience to attract higher-paying jobs and build trust with clients.",
         img: mobileApp,
         alt: "Mobile app icon",
-        elementId: "made-solutions",
-        elementClass: "overview-section",
+        elementClass: "overview-section reverse",
+    },
+    {
+        title: "Connect with a supportive community:",
+        text: "Network with other drivers, share best practices and get help whenever you need it the most.",
+        img: team,
+        alt: "team icon",
+        elementClass: "overview-section column",
+    },
+    {
+        title: "Invest in your future",
+        text: "Build your skills, network with industry professionals and enhance your profession",
+        img: invest,
+        alt: "invest icon",
+        elementClass: "overview-section reverse",
     },
 ];

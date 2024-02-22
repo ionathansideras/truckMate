@@ -15,9 +15,9 @@ export function useIntersectionObserver() {
                 const parentElement = entry.target.parentElement;
                 // If the entry is intersecting (visible in the viewport)
                 if (entry.isIntersecting) {
-                    parentElement?.classList.add(`${parentElement?.id}-visible`);
+                    parentElement?.classList.add(`visible`);
                 } else {
-                    parentElement?.classList.remove(`${parentElement?.id}-visible`);
+                    parentElement?.classList.remove(`visible`);
                 }
             });
         });

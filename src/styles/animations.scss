@@ -1,91 +1,62 @@
-// Define a mixin for setting transform and transition properties
-@mixin transition($transform, $transition) {
-    transform: $transform;
-    transition: $transition;
-}
-
-// Define a map of sections with their respective transform and transition values
-$sections: (
-    our-vision: (
-        -200%,
-        200%,
-        0.6s,
-        0.7s,
-        0.8s,
-    ),
-    we-aim-reversed: (
-        200%,
-        -200%,
-        0.6s,
-        0.7s,
-        0.8s,
-    ),
-    we-believe: (
-        -200%,
-        200%,
-        0.6s,
-        0.7s,
-        0.8s,
-    ),
-    providing-element: (
-        0,
-        0,
-        0.7s,
-        0,
-        0,
-    ),
-    made-solutions: (
-        -200%,
-        200%,
-        0.7s,
-        0.8s,
-        0.9s,
-    ),
-);
-
-// Loop over each section in the sections map
-@each $section, $values in $sections {
-    // Extract the transform and transition values for each element
-    $p-transform: nth($values, 1);
-    $img-transform: nth($values, 2);
-    $h1-transition: nth($values, 3);
-    $p-transition: nth($values, 4);
-    $img-transition: nth($values, 5);
-
-    // Set the initial transform and transition properties for each element in the section
-    ##{$section} {
-        h1 {
-            @include transition(scale(0), all $h1-transition ease-in-out);
-        }
-
-        p {
-            @include transition(
-                translateX($p-transform),
-                all $p-transition ease-in-out
-            );
-        }
-
-        img {
-            @include transition(
-                translateX($img-transform),
-                all $img-transition ease-in-out
-            );
-        }
+.reverse {
+    h1 {
+        transform: translateX(200%);
+        transition: all 0.5s ease-in-out;
     }
 
-    // Set the transform properties for each element in the section when it becomes visible
-    ##{$section}.#{$section}-visible {
-        h1 {
-            transform: scale(1);
-        }
+    p {
+        transform: translateX(200%);
+        transition: all 0.9s ease-in-out;
+    }
 
-        p {
-            transform: translateX(0);
-        }
+    img {
+        transform: translateX(-200%);
+        transition: all 0.7s ease-in-out;
+    }
+}
 
-        img {
-            transform: translateX(0);
-        }
+.column {
+    h1 {
+        transform: translateX(-200%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    p {
+        transform: translateX(-200%);
+        transition: all 0.9s ease-in-out;
+    }
+
+    img {
+        transform: translateX(200%);
+        transition: all 0.7s ease-in-out;
+    }
+}
+.reverse.visible {
+    h1 {
+        transform: translateX(0);
+    }
+
+    p {
+        transform: translateX(0);
+    }
+
+    img {
+        transform: translateX(0);
+    }
+
+}
+
+.column.visible {
+    h1 {
+        transform: translateX(0);
+    }
+
+    p {
+        transform: translateX(0);
+    }
+
+    img {
+        transform: translateX(0);
     }
 }
 
@@ -100,7 +71,7 @@ $sections: (
     }
 }
 
-#wait-list.wait-list-visible {
+.wait-list.visible {
     .wait-list-truck {
         transform: translateX(0);
     }
@@ -122,13 +93,13 @@ $sections: (
     }
 }
 
-#contact-left.contact-left-visible {
+.contact-left.visible {
     .contact-form {
         transform: scale(1);
     }
 }
 
-#contact-right.contact-right-visible {
+.contact-right.visible {
     .contact-information {
         transform: scale(1);
     }
