@@ -1,16 +1,7 @@
 import { overviewData } from "../data/overviewData";
 import { useTranslation } from "react-i18next";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-
-// Define the shape of the data
-interface OverviewData {
-    title: string;
-    text: string;
-    img: string;
-    alt: string;
-    elementId: string;
-    elementClass: string;
-}
+import OverviewData from "../interfaces/overviewData";
 
 export default function SiteOverview() {
     // Use the useTranslation hook to get the t function for translation
@@ -27,7 +18,6 @@ export default function SiteOverview() {
                 return (
                     <section
                         key={index}
-                        id={item.elementId}
                         className={item.elementClass}
                     >
                         <div
