@@ -1,6 +1,7 @@
 {
   "name": "truckmate",
   "private": true,
+  "homepage": "https://truck-mate-fd0m330xd-ionathansideras.vercel.app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
