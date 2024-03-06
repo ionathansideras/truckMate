@@ -12,9 +12,6 @@ export default defineConfig({
   // Use the react plugin
   plugins: [react()],
   
-  // Set the base URL for the project
-  base: "/truckMate/",
-  
   // Configure CSS options
   css: {
     // Configure preprocessor options
