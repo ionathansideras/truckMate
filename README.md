@@ -1,6 +1,6 @@
 # 🚚 TruckMate Website
 
-Welcome to the GitHub repository for the TruckMate waitlist website! 🌐 This project, created by a dedicated freelance developer (that's me!), is a React-based web application designed for managing a waitlist, facilitating user communication, and providing comprehensive information about TruckMate. Now in the hands of the company, the site supports multiple languages 🌍 and features a modern, responsive design with interactive elements to engage users. 🖥️✨
+Welcome to the GitHub repository for the TruckMate waitlist website! 🌐 This project, created by a dedicated developer (that's me!), is a React-based web application designed for managing a waitlist, facilitating user communication, and providing comprehensive information about TruckMate. Now in the hands of the company, the site supports multiple languages 🌍 and features a modern, responsive design with interactive elements to engage users. 🖥️✨
 
 ## 🛠️ Technologies Employed 🎨🔍
 
