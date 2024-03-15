@@ -1,0 +1,31 @@
+@import "_variables.scss";
+
+.main-container {
+    height: 100vh;
+    background-image: url("/main_background_web.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .phones-container {
+        height: 70vh;
+        position: relative;
+
+        img {
+            height: 100%;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+        }
+        #phone1 {
+            left: 35%;
+            transform: rotate(-20deg) translate(-50%, -50%);
+        }
+        #phone3 {
+            left: 65%;
+            transform: rotate(20deg) translate(-50%, -50%);
+        }
+        #phone4 {
+            transform: translate(-50%, -50%);
+        }
+    }
+}
