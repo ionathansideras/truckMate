@@ -43,7 +43,6 @@
     img {
         transform: translateX(0);
     }
-
 }
 
 .column.visible {
@@ -80,7 +79,6 @@
     }
 }
 
-
 .contact-left {
     .contact-form {
         transform: scale(0);
@@ -107,4 +105,87 @@
 
 .header-visible {
     top: 5%;
+}
+
+.main-container.visible {
+    .phones-container {
+        #phone1 {
+            transform: rotate(-10deg) translateY(5%) translateX(5%);
+        }
+        #phone3 {
+            transform: rotate(10deg) translateY(5%) translateX(-5%);
+        }
+    }
+
+    @media (orientation: portrait) {
+        .phones-container {
+            img {
+                height: 50%;
+            }
+            #phone1 {
+                transform: rotate(-10deg) translateY(5%) translateX(25%);
+            }
+            #phone3 {
+                transform: rotate(10deg) translateY(5%) translateX(-25%);
+            }
+        }
+    }
+    @media screen and (max-width: 808px) {
+        .phones-container {
+            img {
+                height: 50%;
+            }
+            #phone1 {
+                transform: rotate(-10deg) translateY(5%) translateX(25%);
+            }
+            #phone3 {
+                transform: rotate(10deg) translateY(5%) translateX(-25%);
+            }
+        }
+    }
+
+    @media screen and (max-width: 578px) {
+        .phones-container {
+            img {
+                height: 50%;
+            }
+            #phone1 {
+                transform: rotate(-10deg) translateY(5%) translateX(35%);
+            }
+            #phone3 {
+                transform: rotate(10deg) translateY(5%) translateX(-35%);
+            }
+        }
+    }
+
+    @media screen and (max-width: 578px) {
+        .phones-container {
+            img {
+                height: 50%;
+            }
+            #phone1 {
+                transform: rotate(-10deg) translateY(5%) translateX(35%);
+            }
+            #phone3 {
+                transform: rotate(10deg) translateY(5%) translateX(-35%);
+            }
+        }
+    }
+
+    @media screen and (max-width: 448px) {
+        .phones-container {
+            img {
+                height: 50%;
+            }
+            #phone1 {
+                transform: rotate(-10deg) translateY(30%) translateX(10%);
+            }
+            #phone3 {
+                display: none;
+            }
+            #phone4 {
+                transform: rotate(10deg) translateY(-25%) translateX(-29%);
+            }
+        }
+    }
 }
