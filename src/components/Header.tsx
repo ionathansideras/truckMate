@@ -9,7 +9,10 @@ import { WaitListProps, ContactProps } from "../interfaces/refProps";
 import { useEffect, useRef } from "react";
 
 // Define the Header component
-export default function Header({ waitListRef, contactRef }: WaitListProps & ContactProps) {
+export default function Header({
+    waitListRef,
+    contactRef,
+}: WaitListProps & ContactProps) {
     // Use the useTranslation hook to get the t function for translation
     const { t } = useTranslation();
 
@@ -34,7 +37,7 @@ export default function Header({ waitListRef, contactRef }: WaitListProps & Cont
 
     useEffect(() => {
         headerRef.current?.classList.add("header-visible");
-    },[]);
+    }, []);
 
     // Render the Header component
     return (
