@@ -47,9 +47,7 @@ export default function Header({
                 {/* Display the truck image */}
                 <img src={truckImg} alt="logo" />
                 {/* Display the text 'Truck' */}
-                <h1 className="header-logo-text1">Truck</h1>
-                {/* Display the text 'mate' */}
-                <h1 className="header-logo-text2">mate</h1>
+                <h1 className="header-logo-text1">Truckmate</h1>
             </div>
 
             {/* Navigation links */}
