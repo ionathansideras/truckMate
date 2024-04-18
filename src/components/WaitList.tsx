@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 
 // my own codebase
 import { greenButton, defaultButton } from "../helpers/buttonFormStyles";
-import truckImg from "../assets/truck.png";
+import truckImg from "../assets/data.svg";
 import emailImg from "../assets/email2.svg";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import { WaitListProps } from "../interfaces/refProps";
-import {addEmailToDatabase} from "../helpers/addEmailToDatabase";
-import {checkRole} from "../helpers/checkRole";
-import {checkEmail} from "../helpers/checkEmail";
+import { addEmailToDatabase } from "../helpers/addEmailToDatabase";
+import { checkRole } from "../helpers/checkRole";
+import { checkEmail } from "../helpers/checkEmail";
 
 // component to display the wait list section of the page
 export default function WaitList({ waitListRef }: WaitListProps) {
