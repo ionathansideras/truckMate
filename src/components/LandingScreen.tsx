@@ -1,6 +1,6 @@
-import phone1 from "../assets/phone1.png";
-import phone4 from "../assets/image5-portrait.png";
-import phone3 from "../assets/phone3.png";
+import phone1 from "../assets/phone1.webp";
+import phone4 from "../assets/image5-portrait.webp";
+import phone3 from "../assets/phone3.webp";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function LandingScreen() {
