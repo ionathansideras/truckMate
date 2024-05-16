@@ -8,11 +8,11 @@ import { useState } from "react";
 import { checkEmail } from "../helpers/checkEmail";
 import { checkName } from "../helpers/checkName";
 import { checkMessage } from "../helpers/checkMessage";
-import {sendEmail} from "../helpers/sendEmail";
+import { sendEmail } from "../helpers/sendEmail";
 
 export default function Contact({ contactRef }: ContactProps) {
     // Use the custom hook to get the sectionRefs ref
-    const sectionRefs =  useIntersectionObserver();
+    const sectionRefs = useIntersectionObserver();
     const [email, setEmail] = useState("");
     const [Name, setName] = useState("");
     const [message, setMessage] = useState("");
@@ -26,7 +26,7 @@ export default function Contact({ contactRef }: ContactProps) {
         if (!checkName(Name)) return;
         if (!checkEmail(email)) return;
         if (!checkMessage(message)) return;
-        sendEmail({sectionRefs});
+        sendEmail({ sectionRefs });
         setEmail("");
         setName("");
         setMessage("");
@@ -80,21 +80,21 @@ export default function Contact({ contactRef }: ContactProps) {
                             <img src={addressImg} alt="address-icon" />
                             {t("Address")}
                         </p>
-                        <h4>Elenis Palaiologinas 5, Limassol, 3040</h4>
+                        <h2>Elenis Palaiologinas 5, Limassol, 3040</h2>
                     </div>
                     <div>
                         <p>
                             <img src={phoneImg} alt="phone-icon" />
                             {t("Phone")}
                         </p>
-                        <h4>+30 6945825666</h4>
+                        <h2>+30 6945825666</h2>
                     </div>
                     <div>
                         <p>
                             <img src={emailImg} alt="email-icon" />
                             Email
                         </p>
-                        <h4>info@truckmate.gr</h4>
+                        <h2>info@truckmate.gr</h2>
                     </div>
                 </div>
             </div>
